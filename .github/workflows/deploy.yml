@@ -4,11 +4,15 @@ on:
   push:
     branches:
       - "main"
+      - "dev-*-test"
   pull_request:
     types:
       - opened
       - assigned
       - closed
+    branches:
+      - "main"
+      - "dev-*-prod"
 
 jobs:
   deploy:
